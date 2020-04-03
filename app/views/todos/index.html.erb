@@ -1,0 +1,9 @@
+<h1> this is todo list </h1>
+<p>the date today is : <%=DateTime.now.to_s(:long)  %></p>
+<h2>There are a total of <%= Todo.count %> todos in our database</h2>
+<% Todo.all.each do |todo| %>
+<div style=" display: flex ;align-items: center">
+   <p style="color: darkblue; font-size: 32px"> <%= todo.todo_text %> </p>
+   <p style=" margin-left: 32px"> <%= todo.due_date %> </p>
+</div>
+<% end %>

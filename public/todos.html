@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Todo Management app</title>
+  <link rel="stylesheet" type="text/css" href="todo-app.css">
+</head>
+
+<body>
+  <main style="margin-left: 3px;">
+    <h1 class="Todopage-title">My To-do List</h1>
+    <form action="/action_page.php" class="Add-Todo">
+      <input class="AddTodo-txt" type="search" placeholder="What's next?">
+      <input class="AddTodo-date" type="date">
+      <button class="AddTodo-button" type="submit">Add</button>
+    </form>
+
+    <section class="TodoSection">
+      <div class="TodoSection-heading">
+        <p class="TodoSection-title">Due Today </p>
+        <p class="Todo-remaining">0/4</p>
+      </div>
+      <div class="Todo-item">
+        <form action="/action_page.php">
+          <input class="TodoItem-checkbox" type="checkbox">
+        </form>
+        <p class="TodoItem-todo">Type something</p>
+        <p class=" TodoItem-overdue">Overdue</p>
+      </div>
+      <div class="Todo-Item">
+        <form action="/action_page.php">
+          <input class="TodoItem-checkbox" type="checkbox">
+        </form>
+        <p class="TodoItem-todo">Type something</p>
+        <img class="image" src="delete-outline.jpg" />
+      </div>
+    </section>
+    <section class="TodoSection">
+      <div class="TodoSection-heading">
+        <p class="TodoSection-title">Due Tomorrow </p>
+        <p class="Todo-remaining">0/3</p>
+      </div>
+      <div class="Todo-item">
+        <form action="/action_page.php">
+          <input class="TodoItem-checkbox" type="checkbox">
+        </form>
+        <p class="TodoItem-todo">Type something</p>
+      </div>
+    </section>
+    <section class="TodoSection">
+      <div class="TodoSection-heading">
+        <p class="TodoSection-title">Remaining </p>
+        <p class="Todo-remaining">0/3</p>
+      </div>
+      <div class="Todo-item">
+        <form action="/action_page.php">
+          <input class="TodoItem-checkbox" type="checkbox">
+        </form>
+        <p class="TodoItem-todo">Type something</p>
+        <p class="TodoItem-date">Jan 21</p>
+      </div>
+      <div class="Todo-item">
+        <form action="/action_page.php">
+          <input class="TodoItem-checkbox" type="checkbox">
+        </form>
+        <p class="TodoItem-todo">Type something</p>
+        <p class="TodoItem-date">Jan 22</p>
+      </div>
+      <div class="Todo-item">
+        <form action="/action_page.php">
+          <input class="TodoItem-checkbox" type="checkbox">
+        </form>
+        <p class="TodoItem-todo">Type something</p>
+        <p class="TodoItem-date">Jan 23</p>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

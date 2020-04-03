@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
   def to_pleasant_string
-    "#{id}. #{name}"
+    "#{id}. #{name} #{email}"
   end
 end

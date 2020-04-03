@@ -1,0 +1,53 @@
+body{
+  font-family: sans-serif;
+  max-width: 600px;
+  /*margin: 0 auto;*/
+  margin-top: 35px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image{
+  max-width: 300px;
+}
+
+.Todopage-main{
+  display: flex;
+
+  /*justify-content: start;*/
+}
+.Todopage-title{
+  font-size: 48px;
+  line-height: 1.6;
+  color: #453C52;
+}
+
+.TodoSection-title{
+  font-size: 34px;
+  line-height: 1.4;
+  color: #453C52;
+}
+
+
+.TodoSection-todo{
+  font-size: 20px;
+  line-height: 1.2;
+  margin-left: 32px;
+  color: #453C52;
+}
+
+.TodoSection{
+  margin-bottom: 32px;
+  margin-left: 32px;
+  padding: 32px;
+}
+
+
+/* Typography scale
+48px
+34px
+24px
+20px
+16px
+*/

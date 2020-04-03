@@ -1,0 +1,154 @@
+[type="date"] {
+  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+  border-radius: 2px;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+body{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 60px; 
+  
+}
+
+.Todopage-title{
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #453C52;
+}
+
+.Add-Todo{
+  display: flex;
+  height: 32px;
+  align-items: stretch;
+   margin-bottom: 22px;
+}
+
+.AddTodo-txt{
+
+  border-radius: 5px;
+  margin-right: 10px;
+  border: 1px solid #BFB8CC;
+  color: #726A7E;
+  padding: 6px 12px; 
+  font-size: 14px;
+}
+
+.AddTodo-date{
+  border-radius: 5px;
+  margin-right: 10px;
+  border: 1px solid #BFB8CC;
+  color: #726A7E;
+  padding: 6px; 
+  font-size: 14px;
+}
+
+.AddTodo-button{
+  padding: 7px 22px;
+  background-color: #48BB78;
+  font-size: 14px;
+  color: #FFFFFF;
+  border-radius: 4px;
+  border: 1px solid #48BB78;
+}
+
+.TodoSection{
+  margin-bottom: 20px;
+}
+
+.TodoSection-heading{
+  display:flex; 
+  align-items: center;
+}
+
+.TodoSection-title{
+  font-size: 14px;
+  color: #453C52;
+  line-height: 1.4;
+  margin-right: 8px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.Todo-remaining{
+  color: #453C52;
+  margin-bottom: 8px;
+  
+}
+
+.Todo-item{
+  display: flex;
+  font-size: 14px;
+  margin-left: 8px;
+  margin-bottom: 6px;
+  color: #453C52;
+  padding: 2px 8px;
+  align-items: center;
+}
+
+.TodoItem-checkbox{
+  width: 16px;
+  height: 16px; 
+  border: 2px solid #BFB8CC;
+  background-color: #FFFFFF;
+}
+
+.image{
+  width: auto;
+  height: 19px;
+  color: #453C52 ;
+  margin-left: 21px;
+}
+
+.Todo-Item{
+  background: #F1EDF7;
+  border-radius: 4px;
+  /*width: 190px;*/
+  margin-left: 19px;
+  display: flex;
+  font-size: 14px;
+  margin-left: 8px;
+  margin-bottom: 6px;
+  color: #453C52;
+  padding: 2px 8px;
+  align-items: center;
+}
+
+.TodoItem-todo{
+  font-size: 14px;
+  margin-left: 8px;
+  color: #453C52;
+  margin-bottom: 2px;    
+  margin-top: 2px;
+ /* width: 106px;*/
+  height: 19px;
+}
+
+.TodoItem-overdue{
+  color: #C53030;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.TodoItem-date{
+  color: #726A7E; 
+  font-size: 12px;
+ /* margin-top: 4px;*/ 
+  margin-left: 10px;
+}
+
+/* Typography scale 
+48px
+34px
+24px
+20px
+16px
+*/
