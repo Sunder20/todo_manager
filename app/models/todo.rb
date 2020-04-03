@@ -9,21 +9,21 @@ class Todo < ActiveRecord::Base
   end
 
   def self.duetoday
-    all.where("due_date = ?" , Date.today)
+    all.where("due_date = ?", Date.today)
   end
 
   def self.overdue
-    all.where("due_date < ?" , Date.today)
+    all.where("due_date < ?", Date.today)
   end
 
   def self.duelater
-    all.where("due_date > ?" , Date.today)
+    all.where("due_date > ?", Date.today)
   end
 
   def self.completed
     all.where(completed: true)
   end
-  
+
   def self.show_list
     puts "My Todo-list\n\n"
 
@@ -40,7 +40,6 @@ class Todo < ActiveRecord::Base
     puts "\n"
   end
 
-  
   def self.mark_as_complete!(todo_id)
     todo = Todo.find(todo_id)
     todo.update(completed: true)
