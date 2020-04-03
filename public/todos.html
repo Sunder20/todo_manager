@@ -1,82 +1,110 @@
+
+ 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Todo Management app</title>
+  <title>Todo Management App</title>
+  <link rel="stylesheet" type="text/css" href="reset.css">
   <link rel="stylesheet" type="text/css" href="todo-app.css">
 </head>
 
 <body>
-  <main style="margin-left: 3px;">
-    <h1 class="Todopage-title">My To-do List</h1>
-    <form action="/action_page.php" class="Add-Todo">
-      <input class="AddTodo-txt" type="search" placeholder="What's next?">
-      <input class="AddTodo-date" type="date">
-      <button class="AddTodo-button" type="submit">Add</button>
-    </form>
+  <main class="MyTodoMain">
+    <article>
+      <h1 class="MyTodo-title">My To-do List</h1>
+      <section class="MyTodo">
+        <input class="MyTodo-text" type="text" placeholder="What's next?">
+        <input class="MyTodo-date" type="date">
+        <input class="MyTodo-button" type="button" value="Add">
+      </section>
+      <section class="Section">
+        <div class="SectionTitle">
+          <p class="SectionTitle-text"> Due Today</p>
+          <p class="SectionTitleCount">0/4</p>
+        </div>
+        <ul style="list-style: decimal;">
+          <li class='MyTodoItem'>
+            <div class='MyTodoItem-Container'>
+              <input class='MyTodoItem-checkbox' type="checkbox">
+              <p class='MyTodoItem-text'>Submit Saas 201 project</p>
+              <p class="MyTodoItem-overdueLabel">Overdue</p>
+              <a class="MyTodoItem-delete" href="javascript:void(0)">
+                <img src="delete-outline.jpg" height="22px" width="25px" alt="Delete icon">
+              </a>
+            </div>
+          </li>
+          <li class='MyTodoItem'>
+            <div class='MyTodoItem-Container'>
+              <input class='MyTodoItem-checkbox' type="checkbox">
+              <p class='MyTodoItem-text'>Call accountant</p>
+              <a class="MyTodoItem-delete" href="javascript:void(0)">
+                <img src="delete-outline.jpg" height="22px" width="25px" alt="Delete icon">
+              </a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="Section">
+        <div class="SectionTitle">
+          <p class="SectionTitle-text"> Due Tomorow</p>
+          <p class="SectionTitleCount ">0/3</p>
+        </div>
+        <ul style="list-style: decimal;">
+          <li class='MyTodoItem'>
+            <div class='MyTodoItem-Container'>
+              <input class='MyTodoItem-checkbox' type="checkbox">
+              <p class='MyTodoItem-text'>Refill groceries</p>
+              <a class="MyTodoItem-delete" href="javascript:void(0)">
+                <img src="delete-outline.jpg" height="22px" width="25px" alt="Delete icon">
+              </a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="Section">
+        <div class="SectionTitle">
+          <p class="SectionTitle-text">Remaining</p>
+          <p class="SectionTitleCount ">0/3</p>
+        </div>
+        <ul style="list-style: decimal;">
 
-    <section class="TodoSection">
-      <div class="TodoSection-heading">
-        <p class="TodoSection-title">Due Today </p>
-        <p class="Todo-remaining">0/4</p>
-      </div>
-      <div class="Todo-item">
-        <form action="/action_page.php">
-          <input class="TodoItem-checkbox" type="checkbox">
-        </form>
-        <p class="TodoItem-todo">Submit Saas 201 project</p>
-        <p class=" TodoItem-overdue">Overdue</p>
-      </div>
-      <div class="Todo-Item">
-        <form action="/action_page.php">
-          <input class="TodoItem-checkbox" type="checkbox">
-        </form>
-        <p class="TodoItem-todo">Call accountant</p>
-        <img class="image" src="delete-outline.jpg" />
-      </div>
-    </section>
-    <section class="TodoSection">
-      <div class="TodoSection-heading">
-        <p class="TodoSection-title">Due Tomorrow </p>
-        <p class="Todo-remaining">0/3</p>
-      </div>
-      <div class="Todo-item">
-        <form action="/action_page.php">
-          <input class="TodoItem-checkbox" type="checkbox">
-        </form>
-        <p class="TodoItem-todo">Type something</p>
-      </div>
-    </section>
-    <section class="TodoSection">
-      <div class="TodoSection-heading">
-        <p class="TodoSection-title">Remaining </p>
-        <p class="Todo-remaining">0/3</p>
-      </div>
-      <div class="Todo-item">
-        <form action="/action_page.php">
-          <input class="TodoItem-checkbox" type="checkbox">
-        </form>
-        <p class="TodoItem-todo">Type something</p>
-        <p class="TodoItem-date">Jan 21</p>
-      </div>
-      <div class="Todo-item">
-        <form action="/action_page.php">
-          <input class="TodoItem-checkbox" type="checkbox">
-        </form>
-        <p class="TodoItem-todo">Type something</p>
-        <p class="TodoItem-date">Jan 22</p>
-      </div>
-      <div class="Todo-item">
-        <form action="/action_page.php">
-          <input class="TodoItem-checkbox" type="checkbox">
-        </form>
-        <p class="TodoItem-todo">Type something</p>
-        <p class="TodoItem-date">Jan 23</p>
-      </div>
-    </section>
-  </main>
+          <li class='MyTodoItem'>
+            <div class='MyTodoItem-Container'>
+              <input class='MyTodoItem-checkbox' type="checkbox">
+              <p class='MyTodoItem-text'>Type something</p>
+              <p class="MyTodoItem-dueDate">Jan 21</p>
+              <a class="MyTodoItem-delete" href="javascript:void(0)">
+                <img src="delete-outline.jpg" height="22px" width="25px" alt="Delete icon">
+              </a>
+            </div>
+          </li>
+          <li class='MyTodoItem'>
+            <div class='MyTodoItem-Container'>
+              <input class='MyTodoItem-checkbox' type="checkbox">
+              <p class='MyTodoItem-text'>Type something</p>
+              <p class="MyTodoItem-dueDate">Jan 22</p>
+              <a class="MyTodoItem-delete" href="javascript:void(0)">
+                <img src="delete-outline.jpg" height="22px" width="25px" alt="Delete icon">
+              </a>
+            </div>
+          </li>
+          <li class='MyTodoItem'>
+            <div class='MyTodoItem-Container'>
+              <input class='MyTodoItem-checkbox' type="checkbox">
+              <p class='MyTodoItem-text'>Type something</p>
+              <p class="MyTodoItem-dueDate">Jan 23</p>
+              <a class="MyTodoItem-delete" href="javascript:void(0)">
+                <img src="delete-outline.jpg" height="22px" width="25px" alt="Delete icon">
+              </a>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </article>
+    </div>
 </body>
 
 </html>
