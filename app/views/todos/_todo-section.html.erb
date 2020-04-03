@@ -8,13 +8,19 @@
         <% todos.all.each do |todo| %>
             <li class='MyTodoItem'>
                 <label class='MyTodoItem-Container'>
+                    <%= form_with(url: "/todos/#{todo.id}" ,method: "put") do %>
+                        <input 
+                            class='MyTodoItem-checkbox' 
+                            name="completed" 
+                            type="checkbox" <%= todo.completed ? "checked" : "" %>
+                            onclick="this.form.submit()"
+                        />
+                    <% end %>
                     <% if todo[:completed]==true%>
-                        <input class='MyTodoItem-checkbox' type="checkbox" checked>
                         <div class="Strike">
                             <%= todo.todo_text %>
                         </div>
                     <%else%>
-                        <input class='MyTodoItem-checkbox' type="checkbox">
                         <%= todo.todo_text %>
                     <% end %>
                     
