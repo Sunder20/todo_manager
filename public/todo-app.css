@@ -129,7 +129,7 @@ input[type=checkbox]
 
 .MyTodoItem-delete {
   margin-left: 8px;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .MyTodoItem-delete:hover {
