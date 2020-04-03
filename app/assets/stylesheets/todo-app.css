@@ -1,7 +1,7 @@
 body {
   font-family: Open Sans, sans-serif;
   max-width: 520px;
-  margin: 0 auto;
+  margin-left: 120px;
   margin-top: 100px;
   line-height: 1;
 }
@@ -52,7 +52,7 @@ body {
   font-size: 14px;
   color: black;
   background: #48bb78;
-  border-radius: 6px;
+  border-radius: 10px;
   padding: 6px 22px;
   opacity: 90%;
 }
@@ -83,7 +83,7 @@ body {
   font-size: 16px;
   color: #453c52;
   letter-spacing: 0.09px;
-  margin-bottom: 8px;
+  margin-top: 4px;
 }
 
 .MyTodoItem {
@@ -101,9 +101,9 @@ body {
 }
 
 .MyTodoItem-checkbox {
-  width: 18px;
-  height: 18px;
+  width: 24px;
   cursor: pointer;
+  margin-right: 12px;
   position: relative;
 }
 
@@ -115,16 +115,6 @@ input[type=checkbox]
   -o-transform: scale(2);
   transform: scale(2);
   padding: 10px;
-}
-
-.MyTodoItem-overdueLabel {
-  font-family: Open Sans, sans-serif;
-  font-size: 18px;
-  color: #c53030;
-  letter-spacing: 0.09px;
-  display: inline;
-  margin-left: 10px;
-  margin-top: 16px;
 }
 
 .MyTodoItem-delete {
@@ -156,4 +146,13 @@ input[type=checkbox]
   color: #726a7e;
   letter-spacing: 0.09px;
   margin-left: 10px;
+}
+
+.MyTodo-ul{
+  list-style: none;
+  margin-left: 16px
+}
+
+.Strike{
+  text-decoration: line-through;
 }
