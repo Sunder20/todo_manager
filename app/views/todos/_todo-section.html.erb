@@ -9,9 +9,9 @@
             <li class='MyTodoItem'>
                 <label class='MyTodoItem-Container'>
                     <%= form_with(url: "/todos/#{todo.id}" ,method: "put") do %>
-                        <input 
-                            class='MyTodoItem-checkbox' 
-                            name="completed" 
+                        <input
+                            class='MyTodoItem-checkbox'
+                            name="completed"
                             type="checkbox" <%= todo.completed ? "checked" : "" %>
                             onclick="this.form.submit()"
                         />
@@ -23,7 +23,7 @@
                     <%else%>
                         <%= todo.todo_text %>
                     <% end %>
-                    
+
                     <% if show_due_date %>
                         <p class="MyTodoItem-dueDate"> <%= todo.due_date.to_s(:short)%> </p>
                     <% end %>

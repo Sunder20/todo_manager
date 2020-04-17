@@ -2,28 +2,28 @@
     <article>
         <h1 class="MyTodo-title">My To-do List</h1>
         <%= form_with(url: "/todos", method: "post", class: "MyTodo") do %>
-            <input class="MyTodo-text" type="text" placeholder="What's next?" name="todo_text">
+            <%= text_field_tag 'todo_text', nil, placeholder: "What's next", class: "MyTodo-text" %>
             <input class="MyTodo-date" type="date" name="due_date">
-            <input class="MyTodo-button" type="submit" value="Add">
+            <%= button_tag "Add" , class: "MyTodo-button" %>
         <% end%>
 
     <%= render partial: "todo-section", locals: {
        section_title: "Overdue",
-       todos: Todo.overdue.where(completed: false),
+       todos: Todo.overdue,
        show_due_date: true
-       } %> 
-    
+       } %>
+
     <%= render partial: "todo-section", locals: {
        section_title: "Due Today",
        todos: Todo.duetoday,
        show_due_date: false
-       } %> 
-    
+       } %>
+
     <%= render partial: "todo-section", locals: {
        section_title: "Due Later",
        todos: Todo.duelater,
        show_due_date: true
-       } %>     
+       } %>
 
     </article>
 </main>

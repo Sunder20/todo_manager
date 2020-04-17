@@ -1,9 +1,4 @@
 class Todo < ActiveRecord::Base
-  def looks
-    is_completed = completed ? "[X]" : "[ ]"
-    "#{id}. #{due_date.to_s(:long)} #{todo_text} #{is_completed}"
-  end
-
   def due_today?
     due_date == Date.today
   end
@@ -13,7 +8,7 @@ class Todo < ActiveRecord::Base
   end
 
   def self.overdue
-    all.where("due_date < ?", Date.today)
+    all.where("due_date < ? and completed=False", Date.today)
   end
 
   def self.duelater
