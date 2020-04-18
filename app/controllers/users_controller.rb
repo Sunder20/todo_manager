@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  skip_before_action :ensure_user_logged_in
 
   def new
     render "users/new"
@@ -16,14 +16,4 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
-  def login
-    email = params[:email]
-    password = params[:password]
-    response_text = "False"
-    if (User.exists?(:email => email, :password => password))
-      response_text = "True"
-    end
-
-    render plain: response_text
-  end
 end
