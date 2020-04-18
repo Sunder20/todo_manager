@@ -4,6 +4,7 @@ class CreateTodos < ActiveRecord::Migration[6.0]
       t.text :todo_text
       t.date :due_date
       t.boolean :completed
+      t.bigint :user_id
     end
   end
 end
