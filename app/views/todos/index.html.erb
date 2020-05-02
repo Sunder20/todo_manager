@@ -2,28 +2,34 @@
     <article>
         <h1 class="MyTodo-title">My To-do List</h1>
         <%= form_with(url: "/todos", method: "post", class: "MyTodo") do %>
-            <%= text_field_tag 'todo_text', nil, placeholder: "What's next", class: "MyTodo-text" %>
-            <input class="MyTodo-date" type="date" name="due_date">
+            <%= text_field_tag 'todo_text', nil,
+                                placeholder: "What's next",
+                                class: "MyTodo-text"
+            %>
+            <input  class="MyTodo-date"
+                    type="date"
+                    name="due_date"
+            >
             <%= button_tag "Add" , class: "MyTodo-button" %>
         <% end%>
 
-    <%= render partial: "todo-section", locals: {
-       section_title: "Overdue",
-       todos: @todos.overdue,
-       show_due_date: true
-       } %>
+        <%= render partial: "todo-section", locals: {
+            section_title: "Overdue",
+            todos: @todos.overdue,
+            show_due_date: true
+        } %>
 
-    <%= render partial: "todo-section", locals: {
-       section_title: "Due Today",
-       todos: @todos.duetoday,
-       show_due_date: false
-       } %>
+        <%= render partial: "todo-section", locals: {
+            section_title: "Due Today",
+            todos: @todos.duetoday,
+            show_due_date: false
+        } %>
 
-    <%= render partial: "todo-section", locals: {
-       section_title: "Due Later",
-       todos: @todos.duelater,
-       show_due_date: true
-       } %>
+        <%= render partial: "todo-section", locals: {
+            section_title: "Due Later",
+            todos: @todos.duelater,
+            show_due_date: true
+        } %>
 
     </article>
 </main>
